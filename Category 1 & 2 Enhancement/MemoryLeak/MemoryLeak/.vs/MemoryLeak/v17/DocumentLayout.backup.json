@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kenyh\\source\\repos\\MemoryLeak\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6AAB001F-8183-4DD1-BFF7-E279558005BD}|MemoryLeak\\MemoryLeak.vcxproj|C:\\Users\\kenyh\\source\\repos\\MemoryLeak\\MemoryLeak\\MemoryLeak.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6AAB001F-8183-4DD1-BFF7-E279558005BD}|MemoryLeak\\MemoryLeak.vcxproj|solutionrelative:MemoryLeak\\MemoryLeak.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MemoryLeak.cpp",
+              "DocumentMoniker": "C:\\Users\\kenyh\\source\\repos\\MemoryLeak\\MemoryLeak\\MemoryLeak.cpp",
+              "RelativeDocumentMoniker": "MemoryLeak\\MemoryLeak.cpp",
+              "ToolTip": "C:\\Users\\kenyh\\source\\repos\\MemoryLeak\\MemoryLeak\\MemoryLeak.cpp",
+              "RelativeToolTip": "MemoryLeak\\MemoryLeak.cpp",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-26T02:38:35.132Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
