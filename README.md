@@ -48,8 +48,8 @@ Watch my detailed code review video, where I analyze my artifacts and discuss en
 Each artifact was enhanced to demonstrate mastery in specific computer science concepts. Below are the detailed narratives for each enhancement.
 
 - **[Enhancement One](EnhancementOne.md)**: Software Design and Engineering
-- **[Enhancement Two](Enhancement-Two.md)**: Algorithms and Data Structures
-- **[Enhancement Three](Enhancement-Three.md)**: Databases
+- **[Enhancement Two](EnhancementTwo.md)**: Algorithms and Data Structures
+- **[Enhancement Three](EnhancementThree.md)**: Databases
 
 ---
 
