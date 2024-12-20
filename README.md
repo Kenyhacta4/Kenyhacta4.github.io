@@ -50,8 +50,8 @@ Watch my detailed code review video, where I analyze my artifacts and discuss en
 
 ### **Artifact 2: Animal Shelter Application**
 #### **Enhancement Three
-- **Original Version**: [View Original Code](artifact2/original/)
-- **Enhanced Version**: [View Enhanced Code](artifact2/enhanced/)
+- **Original Artifact**: [View Original Code](Category%203%20Enhancement/Enhancement3.md)
+- **Enhanced Artifact**: [View Enhanced Code](Category%203%20Enhancement/animalShelter.md)
 - **Narrative**: [View Enhancement Narrative](EnhancementThree.md)
 
 ---
