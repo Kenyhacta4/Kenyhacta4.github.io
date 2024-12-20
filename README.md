@@ -5,7 +5,7 @@ Welcome to my ePortfolio, where I showcase the culmination of my work and learni
 ---
 
 ## 📋 **Table of Contents**
-1. [Professional Self-Assessment](#professional-self-assessment)
+1. [Professional Self-Assessment](01_Professional_Self-Assessment.docx)
 2. [Code Review Video](#code-review-video)
 3. [Artifacts and Enhancements](#artifacts-and-enhancements)
 4. [Narratives](#enhancement-narratives)
@@ -16,7 +16,7 @@ Welcome to my ePortfolio, where I showcase the culmination of my work and learni
 
 This document reflects on my journey through the Computer Science program, highlighting my growth, technical skills, and future aspirations.
 
-📄 [View the Professional Self-Assessment](Professional-Self-Assessment.pdf)
+📄 [View the Professional Self-Assessment](01_Professional_Self-Assessment.docx)
 
 ---
 
