@@ -6,7 +6,7 @@ Welcome to my ePortfolio, where I showcase the culmination of my work and learni
 
 ## 📋 **Table of Contents**
 1. [Professional Self-Assessment](https://kenyhacta4.github.io/Kenyhacta4.github.io/CS%20499%20Professional%20Self-Assessment.md)
-2. [![Code Review Video](https://img.youtube.com/vi/4-ntv1X1UQ0/0.jpg)](https://youtu.be/4-ntv1X1UQ0)
+2. [Code Review Video](https://youtu.be/4-ntv1X1UQ0)
 3. [Artifacts and Enhancements](#artifacts-and-enhancements)
 4. [Narratives](#enhancement-narratives)
 
