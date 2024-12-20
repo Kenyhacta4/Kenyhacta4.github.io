@@ -33,7 +33,7 @@ Watch my detailed code review video, where I analyze my artifacts and discuss en
 ### **Artifact 1: Security for Green Pace**
 - **Original Version**: [View Original Code](artifact1/original/)
 - **Enhanced Version**: [View Enhanced Code](artifact1/enhanced/)
-- **Narrative**: [View Enhancement Narrative](artifact1/narrative.md)
+- **Narrative**: [View Enhancement Narrative](EnhancementOne.md)
 
 ### **Artifact 2: Animal Shelter Application**
 - **Original Version**: [View Original Code](artifact2/original/)
