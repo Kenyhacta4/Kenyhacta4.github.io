@@ -38,10 +38,11 @@ Watch my detailed code review video, where I analyze my artifacts and discuss en
     - [InputValidationTest.cpp](Category%201%20%26%202%20Enhancement/Original1%262/InputValidationTest.cpp)
     - [MemoryLeak.cpp](Category%201%20%26%202%20Enhancement/Original1%262/MemoryLeak.cpp)
     - [SQLInjection.cpp](Category%201%20%26%202%20Enhancement/Original1%262/SQLInjection.cpp)
+
   
 - **Enhanced Version**: [View Enhanced Code](Category%201%20%26%202%20Enhancement/Enhancement1%262/)
-- **Narrative**: [View Enhancement Narrative](EnhancementOne.md)
-- **Narrative**: [View Enhancement Narrative](EnhancementTwo.md)
+
+      
 
 ### **Artifact 2: Animal Shelter Application**
 #### **Enhancement Three
