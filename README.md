@@ -1,24 +1,66 @@
-Welcome to my Computer Science Capstone Portfolio. This repository contains the culmination of my work in the Computer Science program, showcasing my skills and achievements in software development, algorithms, databases, and professional growth.
+# 🎓 Professional ePortfolio for CS-499
 
-Professional Self-Assessment
-	•	CS 499 Professional Self-Assessment.docx
-This is the formal introduction to my portfolio. It reflects on my capstone project experience and the overall Computer Science program.
+Welcome to my ePortfolio, where I showcase the culmination of my work and learning in the Computer Science program. This portfolio highlights my technical skills and specialization in **Cybersecurity**. Below, you'll find an organized view of my professional self-assessment, enhancements, and original and improved artifacts.
 
-Category 1 & 2 Enhancements
+---
 
-  Enhancement One: Software Design and Engineering
-      	•	Enhancement One.docx
-      This document details improvements made to a memory allocation program by adding robust error handling, input validation, performance tracking, and     
-      converting the program from C++ to Python.
-      
-  Enhancement Two: Algorithms and Data Structures
-      	•	Enhancement Two.docx
-      Focused on refining input validation mechanisms, improving retry logic, adding logging, and utilizing secure methods for buffer copying. It also 
-      features improvements in task queue management for efficiency.
+## 📋 **Table of Contents**
+1. [Professional Self-Assessment](#professional-self-assessment)
+2. [Code Review Video](#code-review-video)
+3. [Artifacts and Enhancements](#artifacts-and-enhancements)
+4. [Narratives](#enhancement-narratives)
 
-Category 3 Enhancement
+---
 
-  Enhancement Three: Databases
-    	•	Enhancement Three.docx
-          Highlights improvements to the Animal Shelter MongoDB application, including secure authentication, advanced CRUD operations, and robust data 
-          validation. Enhancements also cover performance optimization and logging.
+## 📝 **Professional Self-Assessment**
+
+This document reflects on my journey through the Computer Science program, highlighting my growth, technical skills, and future aspirations.
+
+📄 [View the Professional Self-Assessment](Professional-Self-Assessment.pdf)
+
+---
+
+## 🎥 **Code Review Video**
+
+Watch my detailed code review video, where I analyze my artifacts and discuss enhancements made to improve their performance and reliability.
+
+📹 [Watch the Code Review Video](https://example.com)
+
+---
+
+## 📂 **Artifacts and Enhancements**
+
+### **Artifact 1: [Artifact Name]**
+- **Original Version**: [View Original Code](artifact1/original/)
+- **Enhanced Version**: [View Enhanced Code](artifact1/enhanced/)
+- **Narrative**: [View Enhancement Narrative](artifact1/narrative.md)
+
+### **Artifact 2: [Artifact Name]**
+- **Original Version**: [View Original Code](artifact2/original/)
+- **Enhanced Version**: [View Enhanced Code](artifact2/enhanced/)
+- **Narrative**: [View Enhancement Narrative](artifact2/narrative.md)
+
+---
+
+## ✍️ **Enhancement Narratives**
+
+Each artifact was enhanced to demonstrate mastery in specific computer science concepts. Below are the detailed narratives for each enhancement.
+
+- **[Enhancement One](Enhancement-One.md)**: Software Design and Engineering
+- **[Enhancement Two](Enhancement-Two.md)**: Algorithms and Data Structures
+- **[Enhancement Three](Enhancement-Three.md)**: Databases
+
+---
+
+## 🛠️ **Skills Demonstrated**
+### Key Skills:
+1. **Secure Coding and Input Validation**: Improved security by adding validations and retry mechanisms.
+2. **Performance Monitoring**: Implemented performance tracking in artifact enhancements.
+3. **Data Management**: Efficiently handled CRUD operations and database optimizations.
+4. **User Experience**: Enhanced error messages and improved logging for usability.
+
+---
+
+## 🎯 **Future Aspirations**
+
+My career goal is to specialize in **Cybersecurity**, where I aim to protect systems and data from evolving threats while contributing to innovative solutions that advance the field.
