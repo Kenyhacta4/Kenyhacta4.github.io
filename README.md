@@ -24,7 +24,7 @@ This document reflects on my journey through the Computer Science program, highl
 
 Watch my detailed code review video, where I analyze my artifacts and discuss enhancements made to improve their performance and reliability.
 
-📹 [Watch the Code Review Video]((https://youtu.be/4-ntv1X1UQ0))
+📹 [Watch the Code Review Video](https://youtu.be/4-ntv1X1UQ0)
 
 ---
 
