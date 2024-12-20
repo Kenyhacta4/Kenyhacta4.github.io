@@ -33,7 +33,7 @@ Watch my detailed code review video, where I analyze my artifacts and discuss en
 ### **Artifact 1: Security for Green Pace**
 #### **Enhancement One and Two
 - **Original Version**: [View Original Code](Category%201%20%26%202%20Enhancement/Original1%262/)
-  ##### Original Artifacts
+  ##### **Original Artifacts
 
 - [BufferOverflow.cpp](Category%201%20%26%202%20Enhancement/Original1%262/BufferOverflow.cpp)
 - [InputValidationTest.cpp](Category%201%20%26%202%20Enhancement/Original1%262/InputValidationTest.cpp)
