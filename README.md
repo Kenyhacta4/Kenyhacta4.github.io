@@ -32,8 +32,8 @@ Watch my detailed code review video, where I analyze my artifacts and discuss en
 
 ### **Artifact 1: Security for Green Pace**
 #### **Enhancement One and Two
-- **Original Version**: [View Original Code](Category%201%20%26%202%20Enhancement/Original1%262.cpp)
-- **Enhanced Version**: [View Enhanced Code](Category%201%20%26%202%20Enhancement/Enhancement1%262.py)
+- **Original Version**: [View Original Code](Category%201%20%26%202%20Enhancement/Original1%262/)
+- **Enhanced Version**: [View Enhanced Code](Category%201%20%26%202%20Enhancement/Enhancement1%262/)
 - **Narrative**: [View Enhancement Narrative](EnhancementOne.md)
 - **Narrative**: [View Enhancement Narrative](EnhancementTwo.md)
 
