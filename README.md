@@ -4,19 +4,24 @@ Welcome to my ePortfolio, where I showcase the culmination of my work and learni
 
 ---
 
-## 📚 Alignment with Course Outcomes
+## 📚 **Alignment with Course Outcomes**
 
 Throughout my Computer Science program and the enhancement of these artifacts, I have demonstrated mastery of the following course outcomes:
-	1.	Building Collaborative Environments
-By creating artifacts that focus on secure coding, such as preventing SQL injection and handling sensitive data efficiently, I showcased my ability to enable diverse audiences to collaborate effectively. These enhancements provide clear, adaptable solutions that empower decision-making in real-world scenarios.
-	2.	Professional Communication
-The ePortfolio, along with detailed documentation and narratives, reflects my ability to design, develop, and deliver professional-quality written and visual communications. Each artifact includes concise documentation, clean code, and user-friendly interfaces that cater to specific audiences.
-	3.	Design and Evaluation of Computing Solutions
-Enhancements such as input validation and buffer overflow prevention involved algorithmic problem-solving and trade-off management. I carefully evaluated multiple approaches to ensure the most efficient and effective solutions were implemented.
-	4.	Application of Innovative Techniques
-Using innovative tools such as Python libraries, MongoDB, and performance logging, I implemented enhancements that align with industry standards. These techniques delivered value to the artifacts by improving functionality, usability, and security.
-	5.	Developing a Security Mindset
-Security has been at the forefront of my enhancements. From preventing SQL injection to adding secure logging and authentication mechanisms, my work demonstrates a strong focus on exposing vulnerabilities, mitigating risks, and ensuring data privacy and resource security.
+
+- **Building Collaborative Environments**  
+  By creating artifacts that focus on secure coding, such as preventing SQL injection and handling sensitive data efficiently, I showcased my ability to enable diverse audiences to collaborate effectively. These enhancements provide clear, adaptable solutions that empower decision-making in real-world scenarios.
+
+- **Professional Communication**  
+  The ePortfolio, along with detailed documentation and narratives, reflects my ability to design, develop, and deliver professional-quality written and visual communications. Each artifact includes concise documentation, clean code, and user-friendly interfaces that cater to specific audiences.
+
+- **Design and Evaluation of Computing Solutions**  
+  Enhancements such as input validation and buffer overflow prevention involved algorithmic problem-solving and trade-off management. I carefully evaluated multiple approaches to ensure the most efficient and effective solutions were implemented.
+
+- **Application of Innovative Techniques**  
+  Using innovative tools such as Python libraries, MongoDB, and performance logging, I implemented enhancements that align with industry standards. These techniques delivered value to the artifacts by improving functionality, usability, and security.
+
+- **Developing a Security Mindset**  
+  Security has been at the forefront of my enhancements. From preventing SQL injection to adding secure logging and authentication mechanisms, my work demonstrates a strong focus on exposing vulnerabilities, mitigating risks, and ensuring data privacy and resource security.
 
 ---
 
