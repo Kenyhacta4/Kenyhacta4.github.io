@@ -1,85 +1,121 @@
+# --------------------------- Logging Configuration --------------------------- #
+# Configures logging to record application events, including info, warnings, and errors
+import logging
+
+logging.basicConfig(
+    filename='animal_shelter.log',  # File where logs are stored
+    level=logging.INFO,             # Log all events at INFO level and above
+    format='%(asctime)s - %(levelname)s - %(message)s'  # Format includes timestamp, level, and message
+)
+
+# --------------------------- Library Imports --------------------------- #
+# Import required libraries for MongoDB, data validation, and more
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 from cerberus import Validator
-import logging
 
-# Configure logging for application-level events
-logging.basicConfig(
-    filename='animal_shelter.log',  # Log file location
-    level=logging.INFO,            # Log level set to INFO
-    format='%(asctime)s - %(levelname)s - %(message)s'  # Log format with timestamp
-)
 
+# --------------------------- AnimalShelter Class --------------------------- #
 class AnimalShelter:
     """
-    CRUD operations for Animal collection in MongoDB.
-    Implements robust data validation, logging, and authentication mechanisms.
+    CRUD operations for the Animal collection in MongoDB.
+    This class integrates data validation, robust logging, authentication, and advanced database features.
     """
 
+    # --------------------------- Initialization --------------------------- #
     def __init__(self, USER, PASS):
         """
-        Initialize the MongoDB client with authentication and connection pooling.
+        Initializes the MongoDB client with user authentication and connection pooling.
+        Sets up indexes for performance optimization.
+
         Parameters:
             USER (str): Username for MongoDB authentication.
             PASS (str): Password for MongoDB authentication.
         """
-        HOST = 'nv-desktop-services.apporto.com'  # Host address of the MongoDB server
-        PORT = 30303                              # Port number for MongoDB
+        HOST = 'nv-desktop-services.apporto.com'  # MongoDB server address
+        PORT = 30303                              # MongoDB server port
         DB = 'aac'                                # Database name
         COL = 'animals'                           # Collection name
 
-        # Authenticate user credentials
-        if not self.authenticate(USER, PASS):
-            raise Exception("Authentication failed")  # Raise error if authentication fails
+        # Authenticate user credentials to determine access level
+        role = self.authenticate(USER, PASS)
+        if not role:
+            raise Exception("Authentication failed")  # Raise exception if authentication fails
+        self.role = role  # Store the authenticated user's role for role-based access control
 
-        # MongoClient supports **connection pooling**, which improves resource management and performance
+        # Establish connection to MongoDB with a connection pool
         self.client = MongoClient(
-            f'mongodb://{USER}:{PASS}@{HOST}:{PORT}',
-            maxPoolSize=50,           # Set a pool of 50 connections for concurrent access
-            socketTimeoutMS=30000     # Set a 30-second socket timeout to prevent hanging connections
+            f'mongodb://{USER}:{PASS}@{HOST}:{PORT}',  # Connection string with credentials
+            maxPoolSize=50,           # Maximum number of connections in the pool
+            socketTimeoutMS=30000     # Timeout to avoid hanging connections
         )
-        self.database = self.client[DB]           # MongoDB database; efficient for hierarchical data
-        self.collection = self.database[COL]      # MongoDB collection; stores documents as flexible JSON-like objects
-        logging.info("Connection successful.")    # Log successful connection
+        self.database = self.client[DB]           # Database handle
+        self.collection = self.database[COL]      # Collection handle
 
+        # Create indexes to optimize queries
+        self.collection.create_index([("name", 1)], unique=True)  # Index on 'name' for uniqueness
+        self.collection.create_index([("breed", 1)])             # Index on 'breed' for efficient filtering
+        logging.info("Connection successful and indexes created.")  # Log successful connection setup
+
+    # --------------------------- Authentication --------------------------- #
     def authenticate(self, user, password):
         """
-        Simulates user authentication. Replace with a secure mechanism in production.
-        Parameters:
-            user (str): Username provided by the user.
-            password (str): Password provided by the user.
-        Returns:
-            bool: True if authentication is successful, False otherwise.
-        """
-        # Example hardcoded authentication logic for demonstration
-        return user == "admin" and password == "securepassword"
+        Authenticates the user and assigns a role based on credentials.
 
+        Parameters:
+            user (str): Username provided by the client.
+            password (str): Password provided by the client.
+
+        Returns:
+            str: Role of the authenticated user, or None if authentication fails.
+        """
+        # Example static user-role mapping for demonstration purposes
+        users = {
+            "admin": {"password": "securepassword", "role": "admin"},
+            "user": {"password": "userpassword", "role": "user"}
+        }
+        if user in users and users[user]["password"] == password:
+            logging.info(f"Authentication successful for user: {user}")
+            return users[user]["role"]
+        logging.error("Authentication failed.")  # Log failure for audit purposes
+        return None
+
+    # --------------------------- Data Validation --------------------------- #
     def validate_data(self, data):
         """
-        Validate input data against a defined schema using the Cerberus library.
-        Parameters:
-            data (dict): Input data to be validated.
-        Returns:
-            bool: True if data passes validation, False otherwise.
-        """
-        # Cerberus Validator uses dictionaries for schema definitions.
-        # Dictionaries in Python provide O(1) average-case complexity for lookups and inserts.
-        schema = {
-            'name': {'type': 'string', 'minlength': 1, 'regex': '^[a-zA-Z]+$'},  # Name must be alphabetic
-            'breed': {'type': 'string', 'minlength': 1, 'regex': '^[a-zA-Z]+$'}, # Breed must be alphabetic
-            'age': {'type': 'integer', 'min': 0}                                 # Age must be a non-negative integer
-        }
-        validator = Validator(schema)  # Validator object for enforcing schema constraints
-        return validator.validate(data)  # Validates input in O(n) where n is the number of fields in the schema
+        Validates the input data structure against a predefined schema.
 
+        Uses the Cerberus library for schema enforcement to ensure data consistency.
+
+        Parameters:
+            data (dict): The data object to validate.
+
+        Returns:
+            bool: True if data passes validation; False otherwise.
+        """
+        schema = {
+            'name': {'type': 'string', 'minlength': 1, 'regex': '^[a-zA-Z]+$'},  # Name: alphabetic and non-empty
+            'breed': {'type': 'string', 'minlength': 1, 'regex': '^[a-zA-Z]+$'}, # Breed: alphabetic and non-empty
+            'age': {'type': 'integer', 'min': 0}                                 # Age: non-negative integer
+        }
+        validator = Validator(schema)
+        if validator.validate(data):
+            return True
+        else:
+            logging.warning(f"Validation failed: {validator.errors}")  # Log specific validation errors
+            return False
+
+    # --------------------------- Logging Events --------------------------- #
     def log_event(self, level, message):
         """
-        Log application events at various severity levels.
+        Logs application events with appropriate severity levels.
+
         Parameters:
             level (str): Severity level ('INFO', 'WARNING', 'ERROR').
-            message (str): Message to be logged.
+            message (str): Log message.
+
+        Logs are stored in a timestamped format for traceability.
         """
-        # Logs are written to a file and timestamped for traceability
         if level.upper() == "INFO":
             logging.info(message)
         elif level.upper() == "WARNING":
@@ -87,85 +123,92 @@ class AnimalShelter:
         elif level.upper() == "ERROR":
             logging.error(message)
 
-    def create(self, data, user):
+    # --------------------------- Create Operation --------------------------- #
+    def create(self, data):
         """
-        Insert a new document into the MongoDB collection.
+        Inserts a new record into the database after validation.
+
         Parameters:
-            data (dict): Data to be inserted into the collection.
-            user (str): Username of the user performing the operation.
+            data (dict): The record to insert.
+
         Returns:
-            bool: True if insertion is successful, False otherwise.
+            bool: True if the operation is successful; False otherwise.
         """
-        if self.validate_data(data):  # Validate the input data in O(n) where n is the schema size
+        if self.validate_data(data):  # Check data against schema
             try:
-                # MongoDB insertions are O(1) for unindexed collections
-                self.collection.insert_one(data)
-                self.log_event("INFO", f"User {user} created a record: {data}")
+                self.collection.insert_one(data)  # O(1) insertion for unindexed collections
+                self.log_event("INFO", f"Record created: {data}")
                 return True
             except Exception as e:
-                self.log_event("ERROR", f"Failed to insert data: {e}")
+                self.log_event("ERROR", f"Insert operation failed: {e}")
                 return False
         else:
-            self.log_event("WARNING", "Validation failed.")
+            self.log_event("WARNING", "Validation failed during insertion.")
             return False
 
+    # --------------------------- Read Operation --------------------------- #
     def read(self, searchData):
         """
-        Query the collection for documents matching the search criteria.
+        Queries the database to retrieve records matching the search criteria.
+
         Parameters:
-            searchData (dict): Query criteria.
+            searchData (dict): MongoDB filter to find records.
+
         Returns:
-            list: A list of documents matching the criteria.
+            list: A list of matching documents.
         """
         try:
-            # MongoDB uses indexed B-trees for queries, providing O(log n) time complexity for indexed fields.
-            cursor = self.collection.find(searchData)
-            results = list(cursor)  # Convert cursor to a list; may take O(n) for large results
-            self.log_event("INFO", f"Read operation successful. Found {len(results)} results.")
+            cursor = self.collection.find(searchData)  # Query using the MongoDB filter
+            results = list(cursor)  # Convert cursor to a list
+            self.log_event("INFO", f"Read operation returned {len(results)} records.")
             return results
         except Exception as e:
-            self.log_event("ERROR", f"Error occurred in read operation: {e}")
+            self.log_event("ERROR", f"Read operation failed: {e}")
             return []
 
+    # --------------------------- Update Operation --------------------------- #
     def update(self, filter, updateData):
         """
-        Update existing documents in the collection based on a filter.
+        Updates existing records in the database based on filter criteria.
+
         Parameters:
-            filter (dict): Criteria to identify documents to be updated.
-            updateData (dict): Data to update in matching documents.
+            filter (dict): Criteria to find records to update.
+            updateData (dict): Fields to update.
+
         Returns:
             int: Number of documents modified.
         """
-        if filter is not None and updateData is not None:  # Ensure both filter and update data are provided
+        if filter and updateData:
             try:
-                # Updates use MongoDB's B-tree indexing for efficient lookups (O(log n))
-                update_result = self.collection.update_many(filter, {"$set": updateData})  # Update many matching documents
-                modified_count = update_result.modified_count  # Count of modified documents
-                self.log_event("INFO", f"Update operation successful. Modified {modified_count} documents.")
-                return modified_count
+                result = self.collection.update_many(filter, {"$set": updateData})  # Update operation
+                self.log_event("INFO", f"Updated {result.modified_count} records.")
+                return result.modified_count
             except Exception as e:
-                self.log_event("ERROR", f"Error occurred in update operation: {e}")
+                self.log_event("ERROR", f"Update operation failed: {e}")
                 return 0
         else:
-            raise Exception("Update failed, filter or updateData parameters are missing")
+            self.log_event("ERROR", "Update operation failed due to missing parameters.")
+            return 0
 
+    # --------------------------- Delete Operation --------------------------- #
     def delete(self, filter):
         """
-        Delete documents from the collection matching the filter criteria.
+        Deletes records matching the filter criteria.
+
         Parameters:
-            filter (dict): Criteria to identify documents to be deleted.
+            filter (dict): Criteria to identify records to delete.
+
         Returns:
-            int: Number of documents deleted.
+            int: Number of records deleted.
         """
-        if filter is not None:  # Ensure filter is provided
+        if filter:
             try:
-                # Deletions also use indexed lookups for filtering, providing O(log n) efficiency
-                delete_result = self.collection.delete_many(filter)  # Delete all matching documents
-                deleted_count = delete_result.deleted_count  # Count of deleted documents
-                self.log_event("INFO", f"Delete operation successful. Deleted {deleted_count} documents.")
-                return deleted_count
+                result = self.collection.delete_many(filter)  # Delete operation
+                self.log_event("INFO", f"Deleted {result.deleted_count} records.")
+                return result.deleted_count
             except Exception as e:
-                self.log_event("ERROR", f"Error occurred in delete operation: {e}")
+                self.log_event("ERROR", f"Delete operation failed: {e}")
                 return 0
         else:
-            raise Exception("Delete failed, filter parameter is missing")
+            self.log_event("ERROR", "Delete operation failed due to missing filter.")
+            return 0
