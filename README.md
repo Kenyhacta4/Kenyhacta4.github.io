@@ -33,7 +33,7 @@ Watch my detailed code review video, where I analyze my artifacts and discuss en
 ### **Artifact 1: Security for Green Pace**
 #### **Enhancement One and Two
 - **Original Artifacts**: 
-  
+
 #####- [BufferOverflow.cpp](Category%201%20%26%202%20Enhancement/Original1%262/BufferOverflow.cpp)
 - [InputValidationTest.cpp](Category%201%20%26%202%20Enhancement/Original1%262/InputValidationTest.cpp)
 - [MemoryLeak.cpp](Category%201%20%26%202%20Enhancement/Original1%262/MemoryLeak.cpp)
