@@ -1,7 +1,11 @@
 Kenyhacta Busby
+
 CS 499
+
 11/22/2024
+
 Enhancement One: Software design and engineering
+
 Briefly describe the artifact. What is it? When was it created?
 The artifact is a security-focused project created in C++ as part of the CS 405 course. It involves creating uniform implementation guidelines, presenting a security policy guide for Green Pace, and ensuring that the development team adheres to best practices. It includes writing unit tests to identify vulnerabilities and addressing risks using 10 guiding security principles.
 
