@@ -31,12 +31,14 @@ Watch my detailed code review video, where I analyze my artifacts and discuss en
 ## 📂 **Artifacts and Enhancements**
 
 ### **Artifact 1: Security for Green Pace**
-- **Original Version**: [View Original Code](artifact1/original/)
-- **Enhanced Version**: [View Enhanced Code](artifact1/enhanced/)
+#### Enhancement One and Two
+- **Original Version**: [View Original Code](Category%201%20%26%202%20Enhancement/Original1%262.cpp)
+- **Enhanced Version**: [View Enhanced Code](Category%201%20%26%202%20Enhancement/Enhancement1%262.py)
 - **Narrative**: [View Enhancement Narrative](EnhancementOne.md)
 - **Narrative**: [View Enhancement Narrative](EnhancementTwo.md)
 
 ### **Artifact 2: Animal Shelter Application**
+#### Enhancement Three
 - **Original Version**: [View Original Code](artifact2/original/)
 - **Enhanced Version**: [View Enhanced Code](artifact2/enhanced/)
 - **Narrative**: [View Enhancement Narrative](EnhancementThree.md)
