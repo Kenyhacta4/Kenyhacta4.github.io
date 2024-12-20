@@ -52,7 +52,6 @@ Watch my detailed code review video, where I analyze my artifacts and discuss en
 #### **Enhancement Three
 - **Original Artifact**: [View Original Code](Category%203%20Enhancement/Enhancement3.md)
 - **Enhanced Artifact**: [View Enhanced Code](Category%203%20Enhancement/animalShelter.md)
-- **Narrative**: [View Enhancement Narrative](EnhancementThree.md)
 
 ---
 
