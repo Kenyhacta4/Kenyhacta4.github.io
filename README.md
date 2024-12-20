@@ -42,10 +42,10 @@ Watch my detailed code review video, where I analyze my artifacts and discuss en
   
 - **Enhanced Version**:
 
-    - [BufferOverflowEnhanced.py](Category%201%20%26%202%20Enhancement/Enhanced1%262/BufferOverFlowEnhanced.py)
-    - [InputValidationEnhanced.py](Category%201%20%26%202%20Enhancement/Enhanced1%262/InputValidationEnhanced.py)
-    - [MemoryLeakEnhanced.py](Category%201%20%26%202%20Enhancement/Enhanced1%262/MemoryLeakEnhanced.py)
-    - [PreventSQLInjectionEnhanced.py](Category%201%20%26%202%20Enhancement/Enhanced1%262/PreventSQLInjectionEnhanced.py)
+  - [BufferOverflowEnhanced.py](Category%201%20%26%202%20Enhancement/Enhancement1%262/BufferOverFlowEnhanced.py)
+  - [InputValidationEnhanced.py](Category%201%20%26%202%20Enhancement/Enhancement1%262/InputValidationEnhanced.py)
+  - [MemoryLeakEnhanced.py](Category%201%20%26%202%20Enhancement/Enhancement1%262/MemoryLeakEnhanced.py)
+  - [PreventSQLInjectionEnhanced.py](Category%201%20%26%202%20Enhancement/Enhancement1%262/PreventSQLInjectionEnhanced.py)
       
 
 ### **Artifact 2: Animal Shelter Application**
