@@ -4,7 +4,7 @@ Welcome to my ePortfolio, where I showcase the culmination of my work and learni
 
 ---
 
-📚 Alignment with Course Outcomes
+## 📚 Alignment with Course Outcomes
 
 Throughout my Computer Science program and the enhancement of these artifacts, I have demonstrated mastery of the following course outcomes:
 	1.	Building Collaborative Environments
