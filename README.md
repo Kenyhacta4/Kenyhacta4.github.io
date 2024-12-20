@@ -30,12 +30,12 @@ Watch my detailed code review video, where I analyze my artifacts and discuss en
 
 ## 📂 **Artifacts and Enhancements**
 
-### **Artifact 1: [Artifact Name]**
+### **Artifact 1: Security for Green Pace**
 - **Original Version**: [View Original Code](artifact1/original/)
 - **Enhanced Version**: [View Enhanced Code](artifact1/enhanced/)
 - **Narrative**: [View Enhancement Narrative](artifact1/narrative.md)
 
-### **Artifact 2: [Artifact Name]**
+### **Artifact 2: Animal Shelter Application**
 - **Original Version**: [View Original Code](artifact2/original/)
 - **Enhanced Version**: [View Enhanced Code](artifact2/enhanced/)
 - **Narrative**: [View Enhancement Narrative](artifact2/narrative.md)
