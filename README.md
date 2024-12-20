@@ -34,11 +34,12 @@ Watch my detailed code review video, where I analyze my artifacts and discuss en
 - **Original Version**: [View Original Code](artifact1/original/)
 - **Enhanced Version**: [View Enhanced Code](artifact1/enhanced/)
 - **Narrative**: [View Enhancement Narrative](EnhancementOne.md)
+- **Narrative**: [View Enhancement Narrative](EnhancementTwo.md)
 
 ### **Artifact 2: Animal Shelter Application**
 - **Original Version**: [View Original Code](artifact2/original/)
 - **Enhanced Version**: [View Enhanced Code](artifact2/enhanced/)
-- **Narrative**: [View Enhancement Narrative](artifact2/narrative.md)
+- **Narrative**: [View Enhancement Narrative](EnhancementThree.md)
 
 ---
 
